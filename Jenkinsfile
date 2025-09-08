@@ -15,7 +15,7 @@ pipeline {
       stage('Run Cypress Tests') {
           steps {
               //bat 'npx cypress run'
-              bat 'npx cypress run -- browser chome Autentifikation.cy.js'
+              bat 'npx cypress run -- browser --force'
           }
       }
   
