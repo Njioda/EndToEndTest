@@ -1,0 +1,1 @@
+[{"uid":"f0180a06d27aeb20","name":"Connection avec le compte creer","time":{"start":1757406694161,"stop":1757406696999,"duration":2838},"status":"passed","severity":"normal"},{"uid":"281db160311b3be","name":"creer le compte utilisateur","time":{"start":1757406681965,"stop":1757406693808,"duration":11843},"status":"passed","severity":"normal"}]

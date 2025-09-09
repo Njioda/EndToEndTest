@@ -1,0 +1,126 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-09-09T08:31:21.938Z",
+    "end": "2025-09-09T08:31:37.046Z",
+    "duration": 15108,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "49869ce7-5681-493f-910b-584a6f286f1c",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Autentifikation.cy.js",
+      "file": "cypress\\e2e\\Autentifikation.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4cc8ea9a-6831-4a4a-a3ea-c730ec03324f",
+          "title": "creer un compte, puis se connecter avec le nouvel utilisateur",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "creer le compte utilisateur",
+              "fullTitle": "creer un compte, puis se connecter avec le nouvel utilisateur creer le compte utilisateur",
+              "timedOut": null,
+              "duration": 11871,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\Autentifikation.cy.js\"\n}",
+              "code": "cy.visit(\"/\");\ncy.get(\"#signin2\").click();\ncy.get(\"#sign-username\").type(UserName, {\n  force: true\n});\ncy.get(\"#sign-username\").invoke(\"prop\", \"value\").should(\"contain\", UserName);\ncy.get(\"#sign-password\").type(PassWord, {\n  force: true\n});\ncy.get(\".btn-primary\").contains(\"Sign up\").click();\ncy.on(\"window:alert\", validerAvecSucces => {\n  expect(validerAvecSucces).to.equal(\"Sign up successful.\");\n  cy.get(\"#sign-password\").invoke(\"prop\", \"value\").should(\"contain\", PassWord);\n  cy.get(\".btn-primary\").contains(\"Sign up\");\n});\ncy.wait(10000);",
+              "err": {},
+              "uuid": "83d27ab3-2cc6-4f55-bc9b-73f704698933",
+              "parentUUID": "4cc8ea9a-6831-4a4a-a3ea-c730ec03324f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Connection avec le compte creer",
+              "fullTitle": "creer un compte, puis se connecter avec le nouvel utilisateur Connection avec le compte creer",
+              "timedOut": null,
+              "duration": 2834,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\Autentifikation.cy.js\"\n}",
+              "code": "cy.visit(\"/\");\ncy.get(\"#login2\").click();\n//cy.contains(\"Form Layouts\").click();\ncy.get(\"#loginusername\").type(UserName, {\n  force: true\n});\ncy.get(\"#loginpassword\").type(PassWord, {\n  force: true\n});\ncy.get(\".btn-primary\").contains(\"Log in\").click();\ncy.contains(`Welcome ${UserName}`).should(\"be.visible\");",
+              "err": {},
+              "uuid": "b40c6829-afe2-41d1-88de-6d48493c08ec",
+              "parentUUID": "4cc8ea9a-6831-4a4a-a3ea-c730ec03324f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "83d27ab3-2cc6-4f55-bc9b-73f704698933",
+            "b40c6829-afe2-41d1-88de-6d48493c08ec"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 14705,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportPageTitle": "custom-title",
+        "embeddedScreenshots": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
