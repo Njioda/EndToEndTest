@@ -11,13 +11,20 @@ pipeline {
   tools {
     nodejs "24.7.0"  // matches the name configured in Jenkin
   }
+  
 
  stages {
-      stage('Install Dependencies') {
-          steps {
-              bat 'npm ci'
-          }
-      }
+        stage('Checkout Code') {
+            steps {
+                git 'https://github.com/Njioda/EndToEndTest.git' // Replace with your repo
+            }
+        }
+
+        stage('Install Dependencies') {
+            steps {
+                bat 'npm ci' // or 'npm install'
+            }
+        }
       stage('Run Cypress Tests') {
           steps {
               //bat 'npx cypress run'
